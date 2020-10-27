@@ -1,0 +1,12 @@
+import {Actions, ActionConst} from 'react-native-router-flux';
+
+import config from '../../../config.js';
+
+export const UPDATE_PAYMENT_METHOD = 'UPDATE_PAYMENT';
+
+export function updatePayment(paymentType) {
+  return dispatch => {
+    dispatch({type: UPDATE_PAYMENT_METHOD, payload: paymentType});
+    Actions.pop();
+  };
+}
